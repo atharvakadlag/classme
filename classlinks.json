@@ -1,0 +1,80 @@
+{
+  "monday": {
+    "09:00-09:50": {
+      "link": "https://meet.google.com/efo-cpex-nzc",
+      "name": "computer-networking"
+    },
+    "10:00-10:50": {
+      "link": "https://meet.google.com/xro-zfvg-rbz",
+      "name": "operating-systems"
+    },
+    "12:00-12:50": {
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "name": "vlsi-system-design"
+    },
+    "14:00-14:50": {
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "name": "automata-and-compiler-design"
+    }
+  },
+  "tuesday": {
+    "09:00-09:50": {
+      "link": "https://meet.google.com/efo-cpex-nzc",
+      "name": "computer-networking"
+    },
+    "11:00-11:50": {
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "name": "vlsi-system-design"
+    },
+    "12:00-12:50": {
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "name": "automata-and-compiler-design"
+    },
+    "16:00-17:50": {
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "name": "entrepreneurship-and-management-functions"
+    }
+  },
+  "wednesday": {
+    "09:00-09:50": {
+      "link": "https://meet.google.com/efo-cpex-nzc",
+      "name": "computer-networking"
+    },
+    "11:00-12:50": {
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "name": "sustainable-design"
+    },
+    "15:00-17:50": {
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "name": "vlsi-system-design-practice"
+    }
+  },
+  "thursday": {
+    "09:00-09:50": {
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "name": "vlsi-system-design"
+    },
+    "11:00-11:50": {
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "name": "automata-and-compiler-design"
+    },
+    "14:00-14:50": {
+      "link": "https://meet.google.com/xro-zfvg-rbz",
+      "name": "operating-systems"
+    },
+    "15:00-17:50": {
+      "link": "https://meet.google.com/efo-cpex-nzc",
+      "name": "computer-networking-practice"
+    }
+  },
+  "friday": {
+    "10:00-10:50": {
+      "link": "https://meet.google.com/xro-zfvg-rbz",
+      "name": "operating-systems"
+    },
+    "15:00-17:50": {
+      "link": "https://meet.google.com/xro-zfvg-rbz",
+      "name": "operating-systems-practice"
+    }
+  }
+}
