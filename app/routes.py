@@ -14,14 +14,10 @@ def get_current_class():
     now = datetime.now() - detla
 
     day = datetime.today().strftime("%A").lower()
-    day = "monday" # TODO: fix this
     data = load_links()[day]
 
     hours = now.strftime("%H")
     minutes = now.strftime("%M")
-
-    hours = 9
-    minutes = 12
 
     now_str = str(hours).zfill(2) + ":" + str(minutes).zfill(2)
     now = datetime.strptime(now_str, "%H:%M")
