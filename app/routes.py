@@ -2,7 +2,9 @@ from app import app
 from flask import redirect
 from datetime import datetime, timedelta
 import json
+from pytz import timezone
 from pprint import pformat
+INTZ = timezone('Asia/Kolkata')
 
 def load_links(file_name = "classlinks.json"):
     # load the given json file
@@ -12,7 +14,7 @@ def load_links(file_name = "classlinks.json"):
 
 def get_current_class():
     detla = timedelta(minutes=30)
-    now = datetime.now() + detla
+    now = datetime.now(INTZ) + detla
 
     day = datetime.today().strftime("%A").lower()
     data = load_links()[day]
