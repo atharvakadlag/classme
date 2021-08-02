@@ -38,5 +38,9 @@ def index():
     current_class = get_current_class()
     print(current_class["link"])
     if current_class is None:
-        return redirect("https://www.youtube.com/watch?v=dQw4w9WgXcQ?ak-says=no-class-right-now", code=302)
+        return redirect('/noclass')
     return redirect(current_class["link"], code=302)
+
+@app.route('/noclass')
+def noclass():
+    return "<center>No class right now!!</center>"
