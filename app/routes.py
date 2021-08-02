@@ -20,9 +20,6 @@ def get_current_class():
     hours = now.strftime("%H")
     minutes = now.strftime("%M")
 
-    hours = 9
-    minutes = 15
-
     now_str = str(hours).zfill(2) + ":" + str(minutes).zfill(2)
     now = datetime.strptime(now_str, "%H:%M")
 
@@ -39,9 +36,7 @@ def get_current_class():
 @app.route('/')
 @app.route('/index')
 def index():
-    data = pformat(load_links())
-    data.replace('\n', '<br>')
-    print(data)
+    data = load_links()
     return data
 
 @app.route('/coe')
