@@ -2,6 +2,7 @@ from app import app
 from flask import redirect
 from datetime import datetime, timedelta
 import json
+from pprint import pformat
 
 def load_links(file_name = "classlinks.json"):
     # load the given json file
@@ -19,6 +20,9 @@ def get_current_class():
     hours = now.strftime("%H")
     minutes = now.strftime("%M")
 
+    hours = 9
+    minutes = 15
+
     now_str = str(hours).zfill(2) + ":" + str(minutes).zfill(2)
     now = datetime.strptime(now_str, "%H:%M")
 
@@ -35,10 +39,24 @@ def get_current_class():
 @app.route('/')
 @app.route('/index')
 def index():
+    data = pformat(load_links())
+    data.replace('\n', '<br>')
+    print(data)
+    return data
+
+@app.route('/coe')
+def coe():
     current_class = get_current_class()
     if current_class is None:
         return redirect('/noclass')
-    return redirect(current_class["link"], code=302)
+    return redirect(current_class["link"]["coe"], code=302)
+
+@app.route('/ced')
+def ced():
+    current_class = get_current_class()
+    if current_class is None:
+        return redirect('/noclass')
+    return redirect(current_class["link"]["ced"], code=302)
 
 @app.route('/noclass')
 def noclass():
