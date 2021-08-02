@@ -11,7 +11,7 @@ def load_links(file_name = "classlinks.json"):
     return data
 
 def get_current_class():
-    detla = timedelta(minutes=10)
+    detla = timedelta(minutes=30)
     now = datetime.now() + detla
 
     day = datetime.today().strftime("%A").lower()
