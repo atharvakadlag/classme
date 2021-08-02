@@ -1,11 +1,11 @@
 {
   "monday": {
     "09:00-09:50": {
-      "link": "https://meet.google.com/efo-cpex-nzc",
+      "link": "https://meet.google.com/efo-cpex-nzc?authuser=1",
       "name": "computer-networking"
     },
     "10:00-10:50": {
-      "link": "https://meet.google.com/xro-zfvg-rbz",
+      "link": "https://meet.google.com/xro-zfvg-rbz?authuser=1",
       "name": "operating-systems"
     },
     "12:00-12:50": {
@@ -19,7 +19,7 @@
   },
   "tuesday": {
     "09:00-09:50": {
-      "link": "https://meet.google.com/efo-cpex-nzc",
+      "link": "https://meet.google.com/efo-cpex-nzc?authuser=1",
       "name": "computer-networking"
     },
     "11:00-11:50": {
@@ -37,7 +37,7 @@
   },
   "wednesday": {
     "09:00-09:50": {
-      "link": "https://meet.google.com/efo-cpex-nzc",
+      "link": "https://meet.google.com/efo-cpex-nzc?authuser=1",
       "name": "computer-networking"
     },
     "11:00-12:50": {
@@ -59,21 +59,21 @@
       "name": "automata-and-compiler-design"
     },
     "14:00-14:50": {
-      "link": "https://meet.google.com/xro-zfvg-rbz",
+      "link": "https://meet.google.com/xro-zfvg-rbz?authuser=1",
       "name": "operating-systems"
     },
     "15:00-17:50": {
-      "link": "https://meet.google.com/efo-cpex-nzc",
+      "link": "https://meet.google.com/efo-cpex-nzc?authuser=1",
       "name": "computer-networking-practice"
     }
   },
   "friday": {
     "10:00-10:50": {
-      "link": "https://meet.google.com/xro-zfvg-rbz",
+      "link": "https://meet.google.com/xro-zfvg-rbz?authuser=1",
       "name": "operating-systems"
     },
     "15:00-17:50": {
-      "link": "https://meet.google.com/xro-zfvg-rbz",
+      "link": "https://meet.google.com/xro-zfvg-rbz?authuser=1",
       "name": "operating-systems-practice"
     }
   },
