@@ -11,7 +11,7 @@ def load_links(file_name = "classlinks.json"):
 
 def get_current_class():
     detla = timedelta(minutes=10)
-    now = datetime.now() - detla
+    now = datetime.now() + detla
 
     day = datetime.today().strftime("%A").lower()
     data = load_links()[day]
@@ -36,6 +36,7 @@ def get_current_class():
 @app.route('/index')
 def index():
     current_class = get_current_class()
+    print(current_class["link"])
     if current_class is None:
         return redirect("https://www.youtube.com/watch?v=dQw4w9WgXcQ?ak-says=no-class-right-now", code=302)
     return redirect(current_class["link"], code=302)
