@@ -36,7 +36,6 @@ def get_current_class():
 @app.route('/index')
 def index():
     current_class = get_current_class()
-    print(current_class["link"])
     if current_class is None:
         return redirect('/noclass')
     return redirect(current_class["link"], code=302)
