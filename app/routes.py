@@ -22,7 +22,7 @@ def get_current_class():
 
     now_str = str(hours).zfill(2) + ":" + str(minutes).zfill(2)
     now = datetime.strptime(now_str, "%H:%M")
-
+    print(now)
     for key in data.keys():
         times = key.split("-")
         start_time = times[0]
