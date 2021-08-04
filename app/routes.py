@@ -38,8 +38,9 @@ def get_current_class():
 @app.route('/')
 @app.route('/index')
 def index():
-    data = load_links()
-    return data
+    # data = load_links()
+    # return data
+    return "<center><img src='/static/timetable.png' width='100vw'></center>"
 
 @app.route('/coe')
 def coe():
