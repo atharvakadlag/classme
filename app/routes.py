@@ -40,7 +40,10 @@ def get_current_class():
 def index():
     # data = load_links()
     # return data
-    return "<center><img src='/static/timetable.png' width='100vw'></center>"
+    return (
+        "<center><img src='/static/timetable.png' width='100vw'></center><br>",
+        "<center><a href='/coe'>COE</a> <a href='/ced'>CED</a></center>",
+    )
 
 @app.route('/coe')
 def coe():
