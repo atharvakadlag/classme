@@ -3,11 +3,16 @@ from flask import redirect
 from datetime import datetime, timedelta
 import json
 from pytz import timezone
-from pprint import pformat
+from os import environ
 INTZ = timezone('Asia/Kolkata')
 
+def inc_count():
+    count = int(environ["COUNT"])
+    count += 1
+    print(f"Website accessed {count} times")
+    environ["COUNT"] = str(count)
+
 def load_links(file_name = "classlinks.json"):
-    # load the given json file
     with open(file_name) as json_file:
         data = json.load(json_file)
     return data
@@ -38,15 +43,12 @@ def get_current_class():
 @app.route('/')
 @app.route('/index')
 def index():
-    # data = load_links()
-    # return data
-    return (
-        "<center><img src='/static/timetable.png' width='100vw'></center><br>",
-        "<center><a href='/coe'>COE</a> <a href='/ced'>CED</a></center>",
-    )
+    inc_count()
+    return "<center><img src='/static/timetable.png' width='100%'></center><br><center><a href='/coe'>COE</a> <a href='/ced'>CED</a></center>"
 
 @app.route('/coe')
 def coe():
+    inc_count()
     current_class = get_current_class()
     if current_class is None:
         return redirect('/noclass')
@@ -54,6 +56,7 @@ def coe():
 
 @app.route('/ced')
 def ced():
+    inc_count()
     current_class = get_current_class()
     if current_class is None:
         return redirect('/noclass')
