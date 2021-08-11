@@ -76,8 +76,8 @@
     },
     "15:00-17:50": {
       "link": {
-        "coe": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "ced": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+		  "coe": "https://teams.microsoft.com/l/meetup-join/19%3aiN8oOVDdJmCNEzWQekoH11YZ6IFdoysx5GzaXzeMs5Y1%40thread.tacv2/1628063151630?context=%7b%22Tid%22%3a%22be5109ea-c534-473c-af60-2054e070a0ed%22%2c%22Oid%22%3a%225f5c9883-3208-4ea7-bd46-f615cef40800%22%7d",
+		  "ced": "https://teams.microsoft.com/l/meetup-join/19%3aiN8oOVDdJmCNEzWQekoH11YZ6IFdoysx5GzaXzeMs5Y1%40thread.tacv2/1628063151630?context=%7b%22Tid%22%3a%22be5109ea-c534-473c-af60-2054e070a0ed%22%2c%22Oid%22%3a%225f5c9883-3208-4ea7-bd46-f615cef40800%22%7d"
       },
       "name": "vlsi-system-design-practice"
     }
