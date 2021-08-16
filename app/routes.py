@@ -1,3 +1,4 @@
+from flask.templating import render_template
 from app import app
 from flask import redirect
 from datetime import datetime, timedelta
@@ -12,17 +13,25 @@ def inc_count():
     print(f"Website accessed {count} times")
     environ["COUNT"] = str(count)
 
-def load_links(file_name = "classlinks.json"):
+def load_data(file_name = "classlinks.json"):
     with open(file_name) as json_file:
         data = json.load(json_file)
     return data
 
+def load_links():
+    data = load_data()
+    links = {}
+    for i in [i.values() for i in data.values()]:
+        for j in i:
+            links[j['name']] = j['link']
+    return links
+
 def get_current_class():
-    detla = timedelta(minutes=30)
+    detla = timedelta(minutes=10)
     now = datetime.now(INTZ) + detla
 
     day = datetime.today().strftime("%A").lower()
-    data = load_links()[day]
+    data = load_data()[day]
 
     hours = now.strftime("%H")
     minutes = now.strftime("%M")
@@ -43,8 +52,18 @@ def get_current_class():
 @app.route('/')
 @app.route('/index')
 def index():
+    return "<br><a href='/coe'>COE</a><br><a href='/ced'>CED</a><br><a href='/timetable'>Timetable</a><br><a href='/links'>Links</a>"
+
+@app.route('/timetable')
+def timetable():
     inc_count()
-    return "<center><img src='/static/timetable.png' width='100%'></center><br><center><a href='/coe'>COE</a> <a href='/ced'>CED</a></center>"
+    return "<center><img src='/static/timetable.png' width='100%'></center>"
+
+@app.route('/links')
+def links():
+    data = load_links()
+    print(data)
+    return render_template("links.html", links=data)
 
 @app.route('/coe')
 def coe():
