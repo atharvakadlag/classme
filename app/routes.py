@@ -62,7 +62,6 @@ def timetable():
 @app.route('/links')
 def links():
     data = load_links()
-    print(data)
     return render_template("links.html", links=data)
 
 @app.route('/coe')

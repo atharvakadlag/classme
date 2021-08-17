@@ -17,7 +17,7 @@
             <tbody>
                 {% for name,link in links.items() %}
                 <tr>
-                    <th scope="row">{{ name }}</th>
+                    <th scope="row">{{ ' '.join(name.split("-")).title() }}</th>
                     <td><a href="{{ link['coe'] }}">COE</a></td>
                     <td><a href="{{ link['ced'] }}">CED</a></td>
                 </tr>
