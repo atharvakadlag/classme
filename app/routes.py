@@ -83,4 +83,4 @@ def ced():
 
 @app.route('/noclass')
 def noclass():
-    return "<center>No class right now!!</center>"
+    return "<center>No class right now!!<br><a href='/links'>Go to Links page</a></center>"
