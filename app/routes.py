@@ -52,7 +52,6 @@ def get_current_class():
 @app.route('/')
 @app.route('/index')
 def index():
-    # return "<br><a href='/coe'>COE</a><br><a href='/ced'>CED</a><br><a href='/timetable'>Timetable</a><br><a href='/links'>Links</a>"
     return render_template("homepage.html")
 
 @app.route('/timetable')
@@ -83,4 +82,4 @@ def ced():
 
 @app.route('/noclass')
 def noclass():
-    return "<center>No class right now!!<br><a href='/links'>Go to Links page</a></center>"
+    return render_template("/noclass.html")
