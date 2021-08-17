@@ -52,12 +52,13 @@ def get_current_class():
 @app.route('/')
 @app.route('/index')
 def index():
-    return "<br><a href='/coe'>COE</a><br><a href='/ced'>CED</a><br><a href='/timetable'>Timetable</a><br><a href='/links'>Links</a>"
+    # return "<br><a href='/coe'>COE</a><br><a href='/ced'>CED</a><br><a href='/timetable'>Timetable</a><br><a href='/links'>Links</a>"
+    return render_template("homepage.html")
 
 @app.route('/timetable')
 def timetable():
     inc_count()
-    return "<center><img src='/static/timetable.png' width='100%'></center>"
+    return "<center><img src='/static/images/timetable.png' width='100%'></center>"
 
 @app.route('/links')
 def links():
