@@ -27,7 +27,7 @@ def load_links():
     return links
 
 def get_current_class():
-    detla = timedelta(minutes=10)
+    detla = timedelta(minutes=20)
     now = datetime.now(INTZ) + detla
 
     day = datetime.today().strftime("%A").lower()
