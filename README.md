@@ -9,7 +9,7 @@ The app was built as a lazy project to automate the boring task of looking up th
 This webapp takes you to the current class based on the data in classlinks.json. It also has pages to show links, and timetabls.
 
 # Deploy
-1. fork the repo
+1. [fork the repo](https://github.com/atharvakadlag/classme/fork)
 2. edit classlinks.json to match your timetable
 3. Click the button to deploy on heroku [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
