@@ -7,12 +7,6 @@ from pytz import timezone
 from os import environ
 INTZ = timezone('Asia/Kolkata')
 
-def inc_count():
-    count = int(environ["COUNT"])
-    count += 1
-    print(f"Website accessed {count} times")
-    environ["COUNT"] = str(count)
-
 def load_data(file_name = "classlinks.json"):
     with open(file_name) as json_file:
         data = json.load(json_file)
@@ -56,7 +50,6 @@ def index():
 
 @app.route('/timetable')
 def timetable():
-    inc_count()
     return "<center><img src='/static/images/timetable.png' width='100%'></center>"
 
 @app.route('/links')
@@ -66,7 +59,6 @@ def links():
 
 @app.route('/coe')
 def coe():
-    inc_count()
     current_class = get_current_class()
     if current_class is None:
         return redirect('/noclass')
@@ -74,7 +66,6 @@ def coe():
 
 @app.route('/ced')
 def ced():
-    inc_count()
     current_class = get_current_class()
     if current_class is None:
         return redirect('/noclass')
